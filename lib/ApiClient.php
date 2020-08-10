@@ -54,7 +54,7 @@ final class ApiClient {
 	 *
 	 * @var string
 	 */
-	private $userAgent = 'PHP-Client/2.1.2/php';
+	private $userAgent = 'PHP-Client/2.0.0/php';
 
 	/**
 	 * The path to the certificate authority file.
@@ -1061,6 +1061,18 @@ final class ApiClient {
             $this->transactionInvoiceService = new \TrustPayments\Sdk\Service\TransactionInvoiceService($this);
         }
         return $this->transactionInvoiceService;
+    }
+    
+    protected $transactionLightboxService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\TransactionLightboxService
+     */
+    public function getTransactionLightboxService() {
+        if(is_null($this->transactionLightboxService)){
+            $this->transactionLightboxService = new \TrustPayments\Sdk\Service\TransactionLightboxService($this);
+        }
+        return $this->transactionLightboxService;
     }
     
     protected $transactionMobileSdkService;
