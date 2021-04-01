@@ -19,18 +19,20 @@
 
 
 namespace TrustPayments\Sdk\Model;
+
+use \ArrayAccess;
 use \TrustPayments\Sdk\ObjectSerializer;
 
 /**
- * PaymentTerminalContactAddress model
+ * CardCryptogram model
  *
  * @category    Class
- * @description 
+ * @description This model holds the additional card authentication.
  * @package     TrustPayments\Sdk
  * @author      customweb GmbH
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
-class PaymentTerminalContactAddress extends PaymentTerminalAddress 
+class CardCryptogram implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -39,7 +41,7 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PaymentTerminalContactAddress';
+    protected static $swaggerModelName = 'CardCryptogram';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -47,7 +49,8 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'type' => '\TrustPayments\Sdk\Model\CardCryptogramType',
+        'value' => 'string'
     ];
 
     /**
@@ -56,7 +59,8 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
       * @var string[]
       */
     protected static $swaggerFormats = [
-        
+        'type' => null,
+        'value' => null
     ];
 
     /**
@@ -66,7 +70,8 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'type' => 'type',
+        'value' => 'value'
     ];
 
     /**
@@ -75,7 +80,8 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      * @var string[]
      */
     protected static $setters = [
-        
+        'type' => 'setType',
+        'value' => 'setValue'
     ];
 
     /**
@@ -84,11 +90,18 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      * @var string[]
      */
     protected static $getters = [
-        
+        'type' => 'getType',
+        'value' => 'getValue'
     ];
 
     
 
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
 
     /**
      * Constructor
@@ -98,8 +111,10 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      */
     public function __construct(array $data = null)
     {
-        parent::__construct($data);
-
+        
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         
     }
 
@@ -110,27 +125,7 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
-
-        if (!is_null($this->container['dependent_locality']) && (mb_strlen($this->container['dependent_locality']) > 100)) {
-            $invalidProperties[] = "invalid value for 'dependent_locality', the character length must be smaller than or equal to 100.";
-        }
-
-        if (!is_null($this->container['email_address']) && (mb_strlen($this->container['email_address']) > 254)) {
-            $invalidProperties[] = "invalid value for 'email_address', the character length must be smaller than or equal to 254.";
-        }
-
-        if (!is_null($this->container['mobile_phone_number']) && (mb_strlen($this->container['mobile_phone_number']) > 100)) {
-            $invalidProperties[] = "invalid value for 'mobile_phone_number', the character length must be smaller than or equal to 100.";
-        }
-
-        if (!is_null($this->container['salutation']) && (mb_strlen($this->container['salutation']) > 20)) {
-            $invalidProperties[] = "invalid value for 'salutation', the character length must be smaller than or equal to 20.";
-        }
-
-        if (!is_null($this->container['sorting_code']) && (mb_strlen($this->container['sorting_code']) > 100)) {
-            $invalidProperties[] = "invalid value for 'sorting_code', the character length must be smaller than or equal to 100.";
-        }
+        $invalidProperties = [];
 
         return $invalidProperties;
     }
@@ -142,7 +137,7 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      */
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes + parent::swaggerTypes();
+        return self::$swaggerTypes;
     }
 
     /**
@@ -152,7 +147,7 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      */
     public static function swaggerFormats()
     {
-        return self::$swaggerFormats + parent::swaggerFormats();
+        return self::$swaggerFormats;
     }
 
 
@@ -164,7 +159,7 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      */
     public static function attributeMap()
     {
-        return parent::attributeMap() + self::$attributeMap;
+        return self::$attributeMap;
     }
 
     /**
@@ -174,7 +169,7 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      */
     public static function setters()
     {
-        return parent::setters() + self::$setters;
+        return self::$setters;
     }
 
     /**
@@ -184,7 +179,7 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
      */
     public static function getters()
     {
-        return parent::getters() + self::$getters;
+        return self::$getters;
     }
 
     /**
@@ -210,6 +205,56 @@ class PaymentTerminalContactAddress extends PaymentTerminalAddress
         return count($this->listInvalidProperties()) === 0;
     }
 
+    
+
+    /**
+     * Gets type
+     *
+     * @return \TrustPayments\Sdk\Model\CardCryptogramType
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param \TrustPayments\Sdk\Model\CardCryptogramType $type 
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+    
+
+    /**
+     * Gets value
+     *
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param string $value 
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
+
+        return $this;
+    }
     
     /**
      * Returns true if offset exists. False otherwise.
