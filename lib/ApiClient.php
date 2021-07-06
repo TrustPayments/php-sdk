@@ -54,7 +54,7 @@ final class ApiClient {
 	 *
 	 * @var string
 	 */
-	private $userAgent = 'PHP-Client/3.0.0/php';
+	private $userAgent = 'PHP-Client/3.0.1/php';
 
 	/**
 	 * The path to the certificate authority file.
@@ -1014,6 +1014,246 @@ final class ApiClient {
             $this->staticValueService = new \TrustPayments\Sdk\Service\StaticValueService($this);
         }
         return $this->staticValueService;
+    }
+    
+    protected $subscriberService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriberService
+     */
+    public function getSubscriberService() {
+        if(is_null($this->subscriberService)){
+            $this->subscriberService = new \TrustPayments\Sdk\Service\SubscriberService($this);
+        }
+        return $this->subscriberService;
+    }
+    
+    protected $subscriptionAffiliateService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionAffiliateService
+     */
+    public function getSubscriptionAffiliateService() {
+        if(is_null($this->subscriptionAffiliateService)){
+            $this->subscriptionAffiliateService = new \TrustPayments\Sdk\Service\SubscriptionAffiliateService($this);
+        }
+        return $this->subscriptionAffiliateService;
+    }
+    
+    protected $subscriptionChargeService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionChargeService
+     */
+    public function getSubscriptionChargeService() {
+        if(is_null($this->subscriptionChargeService)){
+            $this->subscriptionChargeService = new \TrustPayments\Sdk\Service\SubscriptionChargeService($this);
+        }
+        return $this->subscriptionChargeService;
+    }
+    
+    protected $subscriptionLedgerEntryService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionLedgerEntryService
+     */
+    public function getSubscriptionLedgerEntryService() {
+        if(is_null($this->subscriptionLedgerEntryService)){
+            $this->subscriptionLedgerEntryService = new \TrustPayments\Sdk\Service\SubscriptionLedgerEntryService($this);
+        }
+        return $this->subscriptionLedgerEntryService;
+    }
+    
+    protected $subscriptionMetricService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionMetricService
+     */
+    public function getSubscriptionMetricService() {
+        if(is_null($this->subscriptionMetricService)){
+            $this->subscriptionMetricService = new \TrustPayments\Sdk\Service\SubscriptionMetricService($this);
+        }
+        return $this->subscriptionMetricService;
+    }
+    
+    protected $subscriptionMetricUsageService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionMetricUsageService
+     */
+    public function getSubscriptionMetricUsageService() {
+        if(is_null($this->subscriptionMetricUsageService)){
+            $this->subscriptionMetricUsageService = new \TrustPayments\Sdk\Service\SubscriptionMetricUsageService($this);
+        }
+        return $this->subscriptionMetricUsageService;
+    }
+    
+    protected $subscriptionPeriodBillService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionPeriodBillService
+     */
+    public function getSubscriptionPeriodBillService() {
+        if(is_null($this->subscriptionPeriodBillService)){
+            $this->subscriptionPeriodBillService = new \TrustPayments\Sdk\Service\SubscriptionPeriodBillService($this);
+        }
+        return $this->subscriptionPeriodBillService;
+    }
+    
+    protected $subscriptionProductComponentGroupService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductComponentGroupService
+     */
+    public function getSubscriptionProductComponentGroupService() {
+        if(is_null($this->subscriptionProductComponentGroupService)){
+            $this->subscriptionProductComponentGroupService = new \TrustPayments\Sdk\Service\SubscriptionProductComponentGroupService($this);
+        }
+        return $this->subscriptionProductComponentGroupService;
+    }
+    
+    protected $subscriptionProductComponentService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductComponentService
+     */
+    public function getSubscriptionProductComponentService() {
+        if(is_null($this->subscriptionProductComponentService)){
+            $this->subscriptionProductComponentService = new \TrustPayments\Sdk\Service\SubscriptionProductComponentService($this);
+        }
+        return $this->subscriptionProductComponentService;
+    }
+    
+    protected $subscriptionProductFeeTierService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductFeeTierService
+     */
+    public function getSubscriptionProductFeeTierService() {
+        if(is_null($this->subscriptionProductFeeTierService)){
+            $this->subscriptionProductFeeTierService = new \TrustPayments\Sdk\Service\SubscriptionProductFeeTierService($this);
+        }
+        return $this->subscriptionProductFeeTierService;
+    }
+    
+    protected $subscriptionProductMeteredFeeService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductMeteredFeeService
+     */
+    public function getSubscriptionProductMeteredFeeService() {
+        if(is_null($this->subscriptionProductMeteredFeeService)){
+            $this->subscriptionProductMeteredFeeService = new \TrustPayments\Sdk\Service\SubscriptionProductMeteredFeeService($this);
+        }
+        return $this->subscriptionProductMeteredFeeService;
+    }
+    
+    protected $subscriptionProductPeriodFeeService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductPeriodFeeService
+     */
+    public function getSubscriptionProductPeriodFeeService() {
+        if(is_null($this->subscriptionProductPeriodFeeService)){
+            $this->subscriptionProductPeriodFeeService = new \TrustPayments\Sdk\Service\SubscriptionProductPeriodFeeService($this);
+        }
+        return $this->subscriptionProductPeriodFeeService;
+    }
+    
+    protected $subscriptionProductRetirementService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductRetirementService
+     */
+    public function getSubscriptionProductRetirementService() {
+        if(is_null($this->subscriptionProductRetirementService)){
+            $this->subscriptionProductRetirementService = new \TrustPayments\Sdk\Service\SubscriptionProductRetirementService($this);
+        }
+        return $this->subscriptionProductRetirementService;
+    }
+    
+    protected $subscriptionProductService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductService
+     */
+    public function getSubscriptionProductService() {
+        if(is_null($this->subscriptionProductService)){
+            $this->subscriptionProductService = new \TrustPayments\Sdk\Service\SubscriptionProductService($this);
+        }
+        return $this->subscriptionProductService;
+    }
+    
+    protected $subscriptionProductSetupFeeService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductSetupFeeService
+     */
+    public function getSubscriptionProductSetupFeeService() {
+        if(is_null($this->subscriptionProductSetupFeeService)){
+            $this->subscriptionProductSetupFeeService = new \TrustPayments\Sdk\Service\SubscriptionProductSetupFeeService($this);
+        }
+        return $this->subscriptionProductSetupFeeService;
+    }
+    
+    protected $subscriptionProductVersionRetirementService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductVersionRetirementService
+     */
+    public function getSubscriptionProductVersionRetirementService() {
+        if(is_null($this->subscriptionProductVersionRetirementService)){
+            $this->subscriptionProductVersionRetirementService = new \TrustPayments\Sdk\Service\SubscriptionProductVersionRetirementService($this);
+        }
+        return $this->subscriptionProductVersionRetirementService;
+    }
+    
+    protected $subscriptionProductVersionService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionProductVersionService
+     */
+    public function getSubscriptionProductVersionService() {
+        if(is_null($this->subscriptionProductVersionService)){
+            $this->subscriptionProductVersionService = new \TrustPayments\Sdk\Service\SubscriptionProductVersionService($this);
+        }
+        return $this->subscriptionProductVersionService;
+    }
+    
+    protected $subscriptionService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionService
+     */
+    public function getSubscriptionService() {
+        if(is_null($this->subscriptionService)){
+            $this->subscriptionService = new \TrustPayments\Sdk\Service\SubscriptionService($this);
+        }
+        return $this->subscriptionService;
+    }
+    
+    protected $subscriptionSuspensionService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionSuspensionService
+     */
+    public function getSubscriptionSuspensionService() {
+        if(is_null($this->subscriptionSuspensionService)){
+            $this->subscriptionSuspensionService = new \TrustPayments\Sdk\Service\SubscriptionSuspensionService($this);
+        }
+        return $this->subscriptionSuspensionService;
+    }
+    
+    protected $subscriptionVersionService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\SubscriptionVersionService
+     */
+    public function getSubscriptionVersionService() {
+        if(is_null($this->subscriptionVersionService)){
+            $this->subscriptionVersionService = new \TrustPayments\Sdk\Service\SubscriptionVersionService($this);
+        }
+        return $this->subscriptionVersionService;
     }
     
     protected $tokenService;

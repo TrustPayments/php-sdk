@@ -54,7 +54,7 @@ class Role implements ModelInterface, ArrayAccess
         'name' => '\TrustPayments\Sdk\Model\DatabaseTranslatedString',
         'permissions' => '\TrustPayments\Sdk\Model\Permission[]',
         'planned_purge_date' => '\DateTime',
-        'state' => '\TrustPayments\Sdk\Model\CreationEntityState',
+        'state' => '\TrustPayments\Sdk\Model\RoleState',
         'two_factor_required' => 'bool',
         'version' => 'int'
     ];
@@ -377,7 +377,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \TrustPayments\Sdk\Model\CreationEntityState
+     * @return \TrustPayments\Sdk\Model\RoleState
      */
     public function getState()
     {
@@ -387,7 +387,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \TrustPayments\Sdk\Model\CreationEntityState $state 
+     * @param \TrustPayments\Sdk\Model\RoleState $state 
      *
      * @return $this
      */
