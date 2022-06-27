@@ -54,7 +54,7 @@ final class ApiClient {
 	 *
 	 * @var string
 	 */
-	private $userAgent = 'PHP-Client/3.0.1/php';
+	private $userAgent = 'PHP-Client/3.0.3/php';
 
 	/**
 	 * The path to the certificate authority file.
@@ -944,6 +944,18 @@ final class ApiClient {
         return $this->paymentTerminalTillService;
     }
     
+    protected $paymentTerminalTransactionSummaryService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\PaymentTerminalTransactionSummaryService
+     */
+    public function getPaymentTerminalTransactionSummaryService() {
+        if(is_null($this->paymentTerminalTransactionSummaryService)){
+            $this->paymentTerminalTransactionSummaryService = new \TrustPayments\Sdk\Service\PaymentTerminalTransactionSummaryService($this);
+        }
+        return $this->paymentTerminalTransactionSummaryService;
+    }
+    
     protected $permissionService;
 
     /**
@@ -1350,6 +1362,18 @@ final class ApiClient {
             $this->transactionLightboxService = new \TrustPayments\Sdk\Service\TransactionLightboxService($this);
         }
         return $this->transactionLightboxService;
+    }
+    
+    protected $transactionLineItemVersionService;
+
+    /**
+     * @return \TrustPayments\Sdk\Service\TransactionLineItemVersionService
+     */
+    public function getTransactionLineItemVersionService() {
+        if(is_null($this->transactionLineItemVersionService)){
+            $this->transactionLineItemVersionService = new \TrustPayments\Sdk\Service\TransactionLineItemVersionService($this);
+        }
+        return $this->transactionLineItemVersionService;
     }
     
     protected $transactionMobileSdkService;
