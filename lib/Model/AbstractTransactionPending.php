@@ -48,7 +48,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allowed_payment_method_brands' => '\TrustPayments\Sdk\Model\PaymentMethodBrand[]',
+        'allowed_payment_method_brands' => 'int[]',
         'allowed_payment_method_configurations' => 'int[]',
         'billing_address' => '\TrustPayments\Sdk\Model\AddressCreate',
         'completion_behavior' => '\TrustPayments\Sdk\Model\TransactionCompletionBehavior',
@@ -75,7 +75,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'allowed_payment_method_brands' => null,
+        'allowed_payment_method_brands' => 'int64',
         'allowed_payment_method_configurations' => 'int64',
         'billing_address' => null,
         'completion_behavior' => null,
@@ -360,7 +360,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_payment_method_brands
      *
-     * @return \TrustPayments\Sdk\Model\PaymentMethodBrand[]
+     * @return int[]
      */
     public function getAllowedPaymentMethodBrands()
     {
@@ -370,7 +370,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_payment_method_brands
      *
-     * @param \TrustPayments\Sdk\Model\PaymentMethodBrand[] $allowed_payment_method_brands 
+     * @param int[] $allowed_payment_method_brands 
      *
      * @return $this
      */
