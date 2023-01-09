@@ -86,7 +86,8 @@ class TransactionLineItemVersionService {
 	 * Operation countWithHttpInfo
 	 *
 	 * Count
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param \TrustPayments\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -135,13 +136,14 @@ class TransactionLineItemVersionService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'int',
 				'/transaction-line-item-version/count'
 			);
@@ -197,7 +199,8 @@ class TransactionLineItemVersionService {
 	 * Operation createWithHttpInfo
 	 *
 	 * create
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param \TrustPayments\Sdk\Model\TransactionLineItemVersionCreate $line_item_version The line item version object which should be created. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -250,13 +253,14 @@ class TransactionLineItemVersionService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\TransactionLineItemVersion',
 				'/transaction-line-item-version/create'
 			);
@@ -312,7 +316,8 @@ class TransactionLineItemVersionService {
 	 * Operation readWithHttpInfo
 	 *
 	 * Read
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The ID of the line item version which should be returned. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -363,13 +368,14 @@ class TransactionLineItemVersionService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\TransactionLineItemVersion',
 				'/transaction-line-item-version/read'
 			);
@@ -425,7 +431,8 @@ class TransactionLineItemVersionService {
 	 * Operation searchWithHttpInfo
 	 *
 	 * Search
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param \TrustPayments\Sdk\Model\EntityQuery $query The query restricts line item versions which are returned by the search. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -478,13 +485,14 @@ class TransactionLineItemVersionService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\TransactionLineItemVersion[]',
 				'/transaction-line-item-version/search'
 			);

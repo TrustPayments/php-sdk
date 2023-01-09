@@ -86,7 +86,8 @@ class SubscriptionPeriodBillService {
 	 * Operation countWithHttpInfo
 	 *
 	 * Count
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param \TrustPayments\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -135,13 +136,14 @@ class SubscriptionPeriodBillService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'int',
 				'/subscription-period-bill/count'
 			);
@@ -197,7 +199,8 @@ class SubscriptionPeriodBillService {
 	 * Operation readWithHttpInfo
 	 *
 	 * Read
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the subscription period bill which should be returned. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -248,13 +251,14 @@ class SubscriptionPeriodBillService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\SubscriptionPeriodBill',
 				'/subscription-period-bill/read'
 			);
@@ -310,7 +314,8 @@ class SubscriptionPeriodBillService {
 	 * Operation searchWithHttpInfo
 	 *
 	 * Search
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param \TrustPayments\Sdk\Model\EntityQuery $query The query restricts the subscription period bills which are returned by the search. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -363,13 +368,14 @@ class SubscriptionPeriodBillService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\SubscriptionPeriodBill[]',
 				'/subscription-period-bill/search'
 			);

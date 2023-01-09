@@ -86,7 +86,8 @@ class TransactionInvoiceService {
 	 * Operation countWithHttpInfo
 	 *
 	 * Count
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param \TrustPayments\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -135,13 +136,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'int',
 				'/transaction-invoice/count'
 			);
@@ -197,7 +199,8 @@ class TransactionInvoiceService {
 	 * Operation getInvoiceDocumentWithHttpInfo
 	 *
 	 * getInvoiceDocument
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice to get the document for. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -248,13 +251,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\RenderedDocument',
 				'/transaction-invoice/getInvoiceDocument'
 			);
@@ -311,7 +315,8 @@ class TransactionInvoiceService {
 	 * Operation getInvoiceDocumentWithTargetMediaTypeWithHttpInfo
 	 *
 	 * getInvoiceDocumentWithTargetMediaType
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice to get the document for. (required)
 	 * @param int $target_media_type_id The id of the target media type for which the invoice should be generated for. (required)
@@ -370,13 +375,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\RenderedDocument',
 				'/transaction-invoice/getInvoiceDocumentWithTargetMediaType'
 			);
@@ -432,7 +438,8 @@ class TransactionInvoiceService {
 	 * Operation isReplacementPossibleWithHttpInfo
 	 *
 	 * isReplacementPossible
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The invoice which should be checked if a replacement is possible. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -483,13 +490,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'bool',
 				'/transaction-invoice/isReplacementPossible'
 			);
@@ -545,7 +553,8 @@ class TransactionInvoiceService {
 	 * Operation markAsDerecognizedWithHttpInfo
 	 *
 	 * Mark as Derecognized
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice which should be marked as derecognized. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -596,13 +605,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\TransactionInvoice',
 				'/transaction-invoice/markAsDerecognized'
 			);
@@ -658,7 +668,8 @@ class TransactionInvoiceService {
 	 * Operation markAsPaidWithHttpInfo
 	 *
 	 * Mark as Paid
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice which should be marked as paid. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -709,13 +720,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\TransactionInvoice',
 				'/transaction-invoice/markAsPaid'
 			);
@@ -771,7 +783,8 @@ class TransactionInvoiceService {
 	 * Operation readWithHttpInfo
 	 *
 	 * Read
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoices which should be returned. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -822,13 +835,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\TransactionInvoice',
 				'/transaction-invoice/read'
 			);
@@ -885,7 +899,8 @@ class TransactionInvoiceService {
 	 * Operation replaceWithHttpInfo
 	 *
 	 * replace
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoices which should be replaced. (required)
 	 * @param \TrustPayments\Sdk\Model\TransactionInvoiceReplacement $replacement  (required)
@@ -946,13 +961,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\TransactionInvoice',
 				'/transaction-invoice/replace'
 			);
@@ -1008,7 +1024,8 @@ class TransactionInvoiceService {
 	 * Operation searchWithHttpInfo
 	 *
 	 * Search
-	 *
+     
+     *
 	 * @param int $space_id  (required)
 	 * @param \TrustPayments\Sdk\Model\EntityQuery $query The query restricts the transaction invoices which are returned by the search. (required)
 	 * @throws \TrustPayments\Sdk\ApiException
@@ -1061,13 +1078,14 @@ class TransactionInvoiceService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
+            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'POST',
 				$queryParams,
 				$httpBody,
 				$headerParams,
+                $timeOut,
 				'\TrustPayments\Sdk\Model\TransactionInvoice[]',
 				'/transaction-invoice/search'
 			);
