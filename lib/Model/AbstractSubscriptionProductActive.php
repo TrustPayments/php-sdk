@@ -380,7 +380,7 @@ class AbstractSubscriptionProductActive implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \TrustPayments\Sdk\Model\SubscriptionProductState $state 
+     * @param \TrustPayments\Sdk\Model\SubscriptionProductState $state The object's current state.
      *
      * @return $this
      */

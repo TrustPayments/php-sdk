@@ -1,6 +1,6 @@
 {
     "name": "trustpayments/sdk",
-    "version": "3.1.4",
+    "version": "3.2.0",
 	"description": "Trust Payments SDK for PHP",
 	"keywords": [
 		"trustpayments",

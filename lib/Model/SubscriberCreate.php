@@ -229,7 +229,7 @@ class SubscriberCreate extends AbstractSubscriberUpdate
     /**
      * Sets state
      *
-     * @param \TrustPayments\Sdk\Model\CreationEntityState $state 
+     * @param \TrustPayments\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

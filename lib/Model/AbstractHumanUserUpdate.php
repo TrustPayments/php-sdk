@@ -418,7 +418,7 @@ class AbstractHumanUserUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \TrustPayments\Sdk\Model\CreationEntityState $state 
+     * @param \TrustPayments\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

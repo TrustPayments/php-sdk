@@ -546,7 +546,7 @@ class SubscriptionProductVersionPending implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \TrustPayments\Sdk\Model\SubscriptionProductVersionState $state 
+     * @param \TrustPayments\Sdk\Model\SubscriptionProductVersionState $state The object's current state.
      *
      * @return $this
      */

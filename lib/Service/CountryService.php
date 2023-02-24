@@ -120,17 +120,15 @@ class CountryService {
 		}
 		// make the API Call
 		try {
-            $timeOut = $this->apiClient->getConnectionTimeout();
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
 				$queryParams,
 				$httpBody,
 				$headerParams,
-                $timeOut,
 				'\TrustPayments\Sdk\Model\RestCountry[]',
 				'/country/all'
-			);
+            );
 			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\TrustPayments\Sdk\Model\RestCountry[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
