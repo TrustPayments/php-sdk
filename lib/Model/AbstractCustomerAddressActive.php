@@ -219,7 +219,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \TrustPayments\Sdk\Model\CustomerPostalAddressCreate $address 
+     * @param \TrustPayments\Sdk\Model\CustomerPostalAddressCreate $address The actual postal address.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Sets address_type
      *
-     * @param \TrustPayments\Sdk\Model\CustomerAddressType $address_type 
+     * @param \TrustPayments\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
      *
      * @return $this
      */

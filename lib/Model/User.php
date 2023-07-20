@@ -51,7 +51,7 @@ class User implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'planned_purge_date' => '\DateTime',
-        'scope' => '\TrustPayments\Sdk\Model\Scope',
+        'scope' => 'int',
         'state' => '\TrustPayments\Sdk\Model\CreationEntityState',
         'user_type' => '\TrustPayments\Sdk\Model\UserType',
         'version' => 'int'
@@ -65,7 +65,7 @@ class User implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'planned_purge_date' => 'date-time',
-        'scope' => null,
+        'scope' => 'int64',
         'state' => null,
         'user_type' => null,
         'version' => 'int32'
@@ -288,7 +288,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets scope
      *
-     * @return \TrustPayments\Sdk\Model\Scope
+     * @return int
      */
     public function getScope()
     {
@@ -298,7 +298,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets scope
      *
-     * @param \TrustPayments\Sdk\Model\Scope $scope 
+     * @param int $scope The scope that the user belongs to.
      *
      * @return $this
      */
@@ -348,7 +348,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets user_type
      *
-     * @param \TrustPayments\Sdk\Model\UserType $user_type 
+     * @param \TrustPayments\Sdk\Model\UserType $user_type The user's type which defines its role and capabilities.
      *
      * @return $this
      */

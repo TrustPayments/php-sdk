@@ -49,10 +49,10 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'description' => '\TrustPayments\Sdk\Model\DatabaseTranslatedString',
+        'description' => 'map[string,string]',
         'id' => 'int',
         'linked_space_id' => 'int',
-        'name' => '\TrustPayments\Sdk\Model\DatabaseTranslatedString',
+        'name' => 'map[string,string]',
         'planned_purge_date' => '\DateTime',
         'state' => '\TrustPayments\Sdk\Model\CreationEntityState',
         'type' => '\TrustPayments\Sdk\Model\SubscriptionMetricType',
@@ -252,7 +252,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return \TrustPayments\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getDescription()
     {
@@ -262,7 +262,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param \TrustPayments\Sdk\Model\DatabaseTranslatedString $description 
+     * @param map[string,string] $description 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \TrustPayments\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -337,7 +337,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \TrustPayments\Sdk\Model\DatabaseTranslatedString $name 
+     * @param map[string,string] $name 
      *
      * @return $this
      */

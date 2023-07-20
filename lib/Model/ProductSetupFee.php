@@ -50,10 +50,10 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'component' => '\TrustPayments\Sdk\Model\SubscriptionProductComponent',
-        'description' => '\TrustPayments\Sdk\Model\DatabaseTranslatedString',
+        'description' => 'map[string,string]',
         'id' => 'int',
         'linked_space_id' => 'int',
-        'name' => '\TrustPayments\Sdk\Model\DatabaseTranslatedString',
+        'name' => 'map[string,string]',
         'on_downgrade_credited_amount' => '\TrustPayments\Sdk\Model\PersistableCurrencyAmount[]',
         'on_upgrade_credited_amount' => '\TrustPayments\Sdk\Model\PersistableCurrencyAmount[]',
         'setup_fee' => '\TrustPayments\Sdk\Model\PersistableCurrencyAmount[]',
@@ -291,7 +291,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return \TrustPayments\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getDescription()
     {
@@ -301,7 +301,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param \TrustPayments\Sdk\Model\DatabaseTranslatedString $description The description of a component fee describes the fee to the subscriber. The description may be shown in documents or on certain user interfaces.
+     * @param map[string,string] $description The description of a component fee describes the fee to the subscriber. The description may be shown in documents or on certain user interfaces.
      *
      * @return $this
      */
@@ -366,7 +366,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \TrustPayments\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -376,7 +376,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \TrustPayments\Sdk\Model\DatabaseTranslatedString $name The name of the fee should describe for the subscriber in few words for what the fee is for.
+     * @param map[string,string] $name The name of the fee should describe for the subscriber in few words for what the fee is for.
      *
      * @return $this
      */

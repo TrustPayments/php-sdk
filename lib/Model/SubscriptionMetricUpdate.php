@@ -51,8 +51,8 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'version' => 'int',
-        'description' => '\TrustPayments\Sdk\Model\DatabaseTranslatedStringCreate',
-        'name' => '\TrustPayments\Sdk\Model\DatabaseTranslatedStringCreate'
+        'description' => 'map[string,string]',
+        'name' => 'map[string,string]'
     ];
 
     /**
@@ -280,7 +280,7 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return \TrustPayments\Sdk\Model\DatabaseTranslatedStringCreate
+     * @return map[string,string]
      */
     public function getDescription()
     {
@@ -290,7 +290,7 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param \TrustPayments\Sdk\Model\DatabaseTranslatedStringCreate $description 
+     * @param map[string,string] $description 
      *
      * @return $this
      */
@@ -305,7 +305,7 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \TrustPayments\Sdk\Model\DatabaseTranslatedStringCreate
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -315,7 +315,7 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \TrustPayments\Sdk\Model\DatabaseTranslatedStringCreate $name 
+     * @param map[string,string] $name 
      *
      * @return $this
      */

@@ -52,12 +52,12 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
         'component_change_weight' => 'int',
         'component_group' => '\TrustPayments\Sdk\Model\SubscriptionProductComponentGroup',
         'default_component' => 'bool',
-        'description' => '\TrustPayments\Sdk\Model\DatabaseTranslatedString',
+        'description' => 'map[string,string]',
         'id' => 'int',
         'linked_space_id' => 'int',
         'maximal_quantity' => 'float',
         'minimal_quantity' => 'float',
-        'name' => '\TrustPayments\Sdk\Model\DatabaseTranslatedString',
+        'name' => 'map[string,string]',
         'quantity_step' => 'float',
         'reference' => '\TrustPayments\Sdk\Model\SubscriptionProductComponentReference',
         'sort_order' => 'int',
@@ -369,7 +369,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return \TrustPayments\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getDescription()
     {
@@ -379,7 +379,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param \TrustPayments\Sdk\Model\DatabaseTranslatedString $description The component description may contain a longer description which gives the subscriber a better understanding of what the component contains.
+     * @param map[string,string] $description The component description may contain a longer description which gives the subscriber a better understanding of what the component contains.
      *
      * @return $this
      */
@@ -494,7 +494,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \TrustPayments\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -504,7 +504,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \TrustPayments\Sdk\Model\DatabaseTranslatedString $name The component name is shown to the subscriber. It should describe in few words what the component does contain.
+     * @param map[string,string] $name The component name is shown to the subscriber. It should describe in few words what the component does contain.
      *
      * @return $this
      */
